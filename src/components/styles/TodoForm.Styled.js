@@ -53,12 +53,12 @@ color: #fff;
 `
 
 export const SubButton = styled.button`
-background: #ff6f47;
-  color: white;
+  color: rgba(153, 0, 255, 0.959);
   border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
+  color: ${({ color }) => color};
 `
 export const Todos = styled.div`
  margin: 0.5rem;
@@ -69,7 +69,7 @@ export const Todos = styled.div`
 `
 export const TodoListUl = styled.ul`
   min-width: 30%;
-  list-style: none;
+  list-style:none;
 `
 export const TodoListLi = styled.li`
 text-decoration: ${({ decoration }) => decoration};

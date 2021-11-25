@@ -20,8 +20,8 @@ const Todo = ({ text, todo, todos, setTodos }) => {
 
         <Todos>
             <TodoListLi decoration={todo.completed ? 'line-through' : ''} opacity={todo.completed ? '0.5' : ''}> {text}
-                <SubButton onClick={completeHandler} ><i className="fas fa-check"></i></SubButton>
-                <SubButton onClick={deleteHandler}><i className="fas fa-trash"></i></SubButton>
+                <SubButton color='green' onClick={completeHandler} ><i className="fas fa-check"></i></SubButton>
+                <SubButton color='red' onClick={deleteHandler}><i className="fas fa-trash"></i></SubButton>
             </TodoListLi>
         </Todos >
 
