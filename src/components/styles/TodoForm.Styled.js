@@ -53,8 +53,8 @@ color: #fff;
 `
 
 export const SubButton = styled.button`
-  color: rgba(153, 0, 255, 0.959);
-  border: none;
+    background-color: rgb(228, 228, 228);
+border: none;
   padding: 1rem;
   cursor: pointer;
   font-size: 1rem;
@@ -62,9 +62,11 @@ export const SubButton = styled.button`
 `
 export const Todos = styled.div`
  margin: 0.5rem;
-  background: white;
+ background-color: 3fff;
   font-size: 1.5rem;
   color: black;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
+
   transition: all 1s ease;
 `
 export const TodoListUl = styled.ul`
