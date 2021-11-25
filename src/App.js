@@ -1,8 +1,11 @@
+import React, { useState } from "react"
 import { ThemeProvider } from 'styled-components'
 import { MainContainer } from './components/styles/Container.Styled'
 import GlobalStyles from './components/styles/Global.Styled';
 import TodoHeader from './components/TodoHeader';
-import TodoBody from './components/TodoBody'
+import TodoBody from './components/TodoBody';
+import TodoList from './components/TodoList';
+
 const theme = {
   colors: {
     body: '#fff',
@@ -11,13 +14,15 @@ const theme = {
 }
 
 function App() {
+  const [inputText, setInputText] = useState("");
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
         <MainContainer>
           <TodoHeader />
-          <TodoBody />
+          <TodoBody setInputText={setInputText} />
+          <TodoList />
         </MainContainer>
       </>
     </ThemeProvider>
