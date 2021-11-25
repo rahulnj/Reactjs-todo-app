@@ -1,10 +1,19 @@
 import React from "react"
+import { Flex2 } from "./styles/Flex.Styled";
+import { TodoListUl } from "./styles/TodoForm.Styled";
+import Todo from "./Todo";
 
-const TodoList = () => {
+const TodoList = ({ todos }) => {
     return (
-        <div className="todo-container">
-            <ul className="todo-list"></ul>
-        </div>
+        <Flex2>
+            <div>
+                <TodoListUl>
+                    {todos.map(todo => (
+                        <Todo text={todo.text} key={todo.id} />
+                    ))}
+                </TodoListUl>
+            </div>
+        </Flex2>
     )
 }
 

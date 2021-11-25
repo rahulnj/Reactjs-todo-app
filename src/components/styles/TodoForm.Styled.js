@@ -51,3 +51,26 @@ color: #fff;
     
 }
 `
+
+export const SubButton = styled.button`
+background: #ff6f47;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+`
+export const Todos = styled.div`
+ margin: 0.5rem;
+  background: white;
+  font-size: 1.5rem;
+  color: black;
+  transition: all 1s ease;
+`
+export const TodoListUl = styled.ul`
+  min-width: 30%;
+  list-style: none;
+`
+export const TodoListLi = styled.li`
+
+`

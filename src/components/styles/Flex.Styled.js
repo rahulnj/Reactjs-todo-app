@@ -11,3 +11,9 @@ export const Flex1 = styled.div`
 display: flex;
 flex-direction: column;
 `
+
+export const Flex2 = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`

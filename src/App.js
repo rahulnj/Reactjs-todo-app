@@ -15,14 +15,18 @@ const theme = {
 
 function App() {
   const [inputText, setInputText] = useState("");
+  const [todos, setTodos] = useState([])
   return (
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyles />
         <MainContainer>
           <TodoHeader />
-          <TodoBody setInputText={setInputText} />
-          <TodoList />
+          <TodoBody todos={todos}
+            setTodos={setTodos}
+            inputText={inputText}
+            setInputText={setInputText} />
+          <TodoList todos={todos} />
         </MainContainer>
       </>
     </ThemeProvider>
