@@ -72,5 +72,6 @@ export const TodoListUl = styled.ul`
   list-style: none;
 `
 export const TodoListLi = styled.li`
-
-`
+text-decoration: ${({ decoration }) => decoration};
+opacity: ${({ opacity }) => opacity};
+  `

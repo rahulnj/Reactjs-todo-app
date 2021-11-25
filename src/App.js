@@ -26,7 +26,7 @@ function App() {
             setTodos={setTodos}
             inputText={inputText}
             setInputText={setInputText} />
-          <TodoList todos={todos} />
+          <TodoList setTodos={setTodos} todos={todos} />
         </MainContainer>
       </>
     </ThemeProvider>
