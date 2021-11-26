@@ -1,4 +1,5 @@
 import React from "react";
+import { Flex2, Flex3 } from "./styles/Flex.Styled";
 import { SubButton, TodoListLi, Todos } from "./styles/TodoForm.Styled"
 
 const Todo = ({ text, todo, todos, setTodos }) => {
@@ -19,11 +20,15 @@ const Todo = ({ text, todo, todos, setTodos }) => {
     return (
 
         <Todos>
-            <TodoListLi decoration={todo.completed ? 'line-through' : ''} opacity={todo.completed ? '0.5' : ''}> {text}
-                <SubButton color='green' onClick={completeHandler} ><i className="fas fa-check"></i></SubButton>
-                <SubButton color='red' onClick={deleteHandler}><i className="fas fa-trash"></i></SubButton>
-            </TodoListLi>
+            <Flex2>
+                <TodoListLi decoration={todo.completed ? 'line-through' : ''} opacity={todo.completed ? '0.5' : ''}> {text}
+                    <SubButton color='green' onClick={completeHandler} ><i className="far fa-check-square"></i></SubButton>
+                    <SubButton color='red' onClick={deleteHandler}><i className="far fa-trash-alt"></i></SubButton>
+                </TodoListLi>
+            </Flex2>
         </Todos >
+
+
 
     )
 }

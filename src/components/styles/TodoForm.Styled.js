@@ -53,7 +53,7 @@ color: #fff;
 `
 
 export const SubButton = styled.button`
-    background-color: rgb(228, 228, 228);
+background-color: #ede9fe;
 border: none;
   padding: 1rem;
   cursor: pointer;
@@ -61,12 +61,12 @@ border: none;
   color: ${({ color }) => color};
 `
 export const Todos = styled.div`
- margin: 0.5rem;
- background-color: 3fff;
-  font-size: 1.5rem;
+ width: 25rem;
+ margin: auto;
+ background-color: #ede9fe;
+  font-size: 1.25rem;
   color: black;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1), 0 1px 1px rgba(0, 0, 0, 0.1);
-  transition: all 1s ease;
 `
 export const TodoListUl = styled.ul`
   min-width: 30%;
@@ -75,4 +75,7 @@ export const TodoListUl = styled.ul`
 export const TodoListLi = styled.li`
 text-decoration: ${({ decoration }) => decoration};
 opacity: ${({ opacity }) => opacity};
-  `
+margin-left: .5rem;
+transition: all .3s ease-in-out;
+
+`
