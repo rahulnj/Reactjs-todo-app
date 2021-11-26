@@ -7,17 +7,14 @@ const TodoList = ({ todos, setTodos, filteredTodos }) => {
     return (
         <div>
             <TodoListUl>
-                <Flex2>
-                    {filteredTodos.map(todo => (
-                        <Todo setTodos={setTodos}
-                            todos={todos}
-                            text={todo.text}
-                            key={todo.id}
-                            todo={todo} />
-                    ))}
-                </Flex2>
+                {filteredTodos.map(todo => (
+                    <Todo setTodos={setTodos}
+                        todos={todos}
+                        text={todo.text}
+                        key={todo.id}
+                        todo={todo} />
+                ))}
             </TodoListUl>
-
         </div>
 
     )

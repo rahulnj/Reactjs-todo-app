@@ -20,14 +20,11 @@ const Todo = ({ text, todo, todos, setTodos }) => {
     return (
 
         <Todos>
-            <Flex2>
-                <TodoListLi decoration={todo.completed ? 'line-through' : ''} opacity={todo.completed ? '0.5' : ''}> {text}
-                    <SubButton color='green' onClick={completeHandler} ><i className="far fa-check-square"></i></SubButton>
-                    <SubButton color='red' onClick={deleteHandler}><i className="far fa-trash-alt"></i></SubButton>
-                </TodoListLi>
-            </Flex2>
+            <TodoListLi decoration={todo.completed ? 'line-through' : ''} opacity={todo.completed ? '0.5' : ''}> {text}
+                <SubButton color='green' onClick={completeHandler} ><i className="far fa-check-square"></i></SubButton>
+                <SubButton color='red' onClick={deleteHandler}><i className="far fa-trash-alt"></i></SubButton>
+            </TodoListLi>
         </Todos >
-
 
 
     )
