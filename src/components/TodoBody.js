@@ -3,10 +3,9 @@ import { ContainerBody } from "./styles/Container.Styled"
 import { Flex, Flex1 } from "./styles/Flex.Styled"
 import { Todocontainer } from "./styles/TodoContainer.Styled"
 import { Input, Select, Button } from "./styles/TodoForm.Styled"
-const TodoBody = ({ inputText, setInputText, todos, setTodos }) => {
+const TodoBody = ({ inputText, setInputText, todos, setTodos, setStatus }) => {
     const inputTextHandler = (e) => {
         setInputText(e.target.value)
-        console.log(e.target.value);
     }
     const submitTodoHandler = (e) => {
         e.preventDefault();
@@ -15,6 +14,10 @@ const TodoBody = ({ inputText, setInputText, todos, setTodos }) => {
         ])
         setInputText("")
     }
+    const statusHandler = (e) => {
+        console.log(e.target.value);
+        setStatus(e.target.value)
+    }
     return (
         <ContainerBody>
             <Todocontainer>
@@ -22,7 +25,7 @@ const TodoBody = ({ inputText, setInputText, todos, setTodos }) => {
                     <form action="">
                         <Input value={inputText} onChange={inputTextHandler} type="text" />
                         <Button onClick={submitTodoHandler}>Add</Button>
-                        <Select name="todos" id="filter-todos">
+                        <Select onChange={statusHandler} name="todos" id="filter-todos">
                             <option value="all">All</option>
                             <option value="completed">Completed</option>
                             <option value="uncompleted">Uncompleted</option>
