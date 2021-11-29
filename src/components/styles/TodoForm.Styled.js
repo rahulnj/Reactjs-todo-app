@@ -77,5 +77,7 @@ text-decoration: ${({ decoration }) => decoration};
 opacity: ${({ opacity }) => opacity};
 margin-left: .5rem;
 transition: all .3s ease-in-out;
-
+display: flex;
+align-items: center;
+justify-content: space-between;
 `
